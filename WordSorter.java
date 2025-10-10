@@ -57,9 +57,10 @@ public class WordSorter
 		while(col){
 			if(nik==1){
 				System.out.print("enter a lowercase letter: ");
-				inp.nextLine()
-				for(int k=0;k<leo[inp.nextLine().compareTo("a")].size(); k++){
-					System.out.print(leo[26].get(k)+" ");
+				inp.nextLine();
+				int eve = inp.nextLine().compareTo("a");
+				for(int k=0;k<leo[eve].size(); k++){
+					System.out.print(leo[eve].get(k)+" ");
 				}
 			}
 			else if(nik==2){
