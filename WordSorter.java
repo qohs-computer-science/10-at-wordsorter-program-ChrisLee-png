@@ -17,7 +17,7 @@ public class WordSorter
 		}//end catch?
 
 		String word = "";
-		ArrayList [] leo = new ArrayList[27];
+		ArrayList [] leo = new ArrayList[26];
 		for(int l=0;l<leo.length;l++){
 			leo[l]= new ArrayList<String>();
 		}//end loop to initialize arraylists in array
@@ -53,7 +53,7 @@ public class WordSorter
 				System.out.println("\nenter a lowercase letter: ");
 				inp.nextLine();
 				String eve = inp.nextLine();
-				if(leo[eve.compareTo("a")].size()>0){
+			if(leo[eve.compareTo("a")].size()>0){
 				for(int k=0;k<leo[eve.compareTo("a")].size(); k++){
 					System.out.print(leo[eve.compareTo("a")].get(k)+" ");
 				}//end loop to print words that start with letter
@@ -68,7 +68,7 @@ public class WordSorter
 					if((e+97)<123){
 						System.out.println();
 						System.out.println((char)(e+97)+": \n");
-					}
+					}//print starting letter
 					for(int k=0;k<leo[e].size(); k++){
 						System.out.print(leo[e].get(k)+" ");
 				}//loops through each arraylist to print words from article
