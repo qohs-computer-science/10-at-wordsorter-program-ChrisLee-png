@@ -44,15 +44,7 @@ public class WordSorter
 			}//end loop that checks if words are unique
 		}//end loop to fix words?
 		Scanner inp = new Scanner(System.in);
-		System.out.println("Enter in some of your own words, when you want to stop enter 'x'");
-		String kat="";
-		while(!(kat.equals("x"))){
-			kat =inp.nextLine();
-			if(!(kat.equals("x")))
-				leo[26].add(kat);
-			}//end loop to add user input				
-		
-		boolean col = true;
+			
 		int nik = 0;
 		while(nik==0){
 			System.out.println("\n\nYou now have the following options: \n1. Print out all words starting with a specific letter \n2. Print out all words \n3. Print out the total number of unique words \n4. Search and determine if a word is in the article \n5. Remove a word from the data structure \n6. Exit\n");
@@ -65,31 +57,29 @@ public class WordSorter
 				for(int k=0;k<leo[eve.compareTo("a")].size(); k++){
 					System.out.print(leo[eve.compareTo("a")].get(k)+" ");
 				}//end loop to print words that start with letter
-				for(int k=0;k<leo[26].size(); k++){
-					String e = ""+leo[26].get(k);
-					if(e.substring(0,1).equals(eve))
-						System.out.print(leo[26].get(k)+" ");
-				}//end loop to print user words that start with letter
+				
 			}else
 				System.out.println("No words start with this letter");
 
 				nik=0;
 			}//end if to implememt task 1
 			else if(nik==2){
-				for(int e=0;e<leo.length-1;e++){
+				for(int e=0;e<leo.length;e++){
+					if((e+97)<123){
+						System.out.println();
+						System.out.println((char)(e+97)+": \n");
+					}
 					for(int k=0;k<leo[e].size(); k++){
 						System.out.print(leo[e].get(k)+" ");
 				}//loops through each arraylist to print words from article
 				}//loops through array
-				for(int k=0;k<leo[26].size(); k++){
-					System.out.print(leo[26].get(k) + " ");
-				}//prints user input words
+				
 				nik=0;
 				
 			}//end if to implememt task 2
 			else if(nik==3){
 				int uni=0;
-				for(int jas=0;jas<leo.length-1;jas++){
+				for(int jas=0;jas<leo.length;jas++){
 					uni+=leo[jas].size();
 				}//loops through array and adds arraylist lengths
 				if(uni>0)
